@@ -20,6 +20,17 @@ end
 
 def count_contestants_by_hometown(data, hometown)
   # code here
+  count = 0
+
+  data.each do |key, value|
+   value.each do |key2, value2|
+      if key2[:hometown] == hometown
+         count = count + 1
+      end
+   end
+  end
+
+  count
 end
 
 def get_occupation(data, hometown)
