@@ -46,4 +46,13 @@ end
 
 def get_average_age_for_season(data, season)
   # code here
+  ages = 0
+  count = 0
+
+  data[season.to_sym].each do |key, value|
+   ages = ages + key[:age].to_f
+   count = count + 1
+  end
+
+  (ages / count).round
 end
